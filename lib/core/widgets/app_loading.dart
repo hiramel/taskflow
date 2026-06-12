@@ -1,0 +1,3 @@
+class AppLoading {
+  AppLoading._();
+}

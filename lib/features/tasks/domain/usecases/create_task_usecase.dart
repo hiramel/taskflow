@@ -1,0 +1,3 @@
+class CreateTaskUseCase {
+  CreateTaskUseCase();
+}

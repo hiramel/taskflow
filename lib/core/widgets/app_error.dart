@@ -1,0 +1,3 @@
+class AppError {
+  AppError._();
+}
