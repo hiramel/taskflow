@@ -114,7 +114,7 @@ create table if not exists public.tasks (
   id uuid primary key default gen_random_uuid(),
   title text not null,
   description text not null,
-  due_date timestamptz not null,
+  due_date date not null,
   category text not null,
   priority text not null check (priority in ('low', 'medium', 'high')),
   status text not null check (status in ('pending', 'completed'))
@@ -192,13 +192,34 @@ Password:
 
 If registration is temporarily limited by Supabase email rate limits, reviewers can use the demo account to access the application immediately.
 
+## Demo Video
+
+A demo video is available in the `Demo/` folder.
+
+## Screenshots
+
+![Login](screenshots/1.png)
+
+![Dashboard](screenshots/2.png)
+
+![Tasks](screenshots/3.png)
+
+![Filters](screenshots/4.png)
+
+![NewTask](screenshots/5.png)
+
+![Profile](screenshots/6.png)
+
+![Help](screenshots/7.png)
+
+
 ## Future Improvements
 
 - Add user profile editing
 - Add task labels or tags
 - Add recurring tasks
 - Add offline caching for tasks
-- Add stronger form validation and richer error handling
+- Add stronger form validation
 - Add UI tests for main user flows
 - Add repository tests for Supabase-backed data access
 - Add theming options beyond light and dark mode
